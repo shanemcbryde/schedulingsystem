@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="870.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="schedulingsystem.view_controller.ReportsController">
+    <children>
+      <AnchorPane prefHeight="120.0" prefWidth="870.0">
+         <children>
+            <Button fx:id="appointmentsBtn" layoutX="30.0" layoutY="30.0" mnemonicParsing="false" onAction="#appointmentsBtnHandler" text="Appointments" textFill="#000000b2">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="customersBtn" layoutX="195.0" layoutY="30.0" mnemonicParsing="false" onAction="#customersBtnHandler" text="Customers" textFill="#000000b2">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="monthlyBtn" layoutX="736.0" layoutY="63.0" mnemonicParsing="false" onAction="#monthlyBtnHandler" text="Monthly View" textFill="#000000b2">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="exitBtn" layoutX="803.0" layoutY="20.0" mnemonicParsing="false" onAction="#exitBtnHandler" text="Exit" textFill="#000000b2">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="weeklyBtn" layoutX="605.0" layoutY="63.0" mnemonicParsing="false" onAction="#weeklyBtnHandler" text="Weekly View" textFill="#000000b2">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="120.0" prefHeight="30.0" prefWidth="870.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="870.0" spacing="30.0">
+               <children>
+                  <Button fx:id="scheduleBtn" mnemonicParsing="false" onAction="#scheduleBtnHandler" text="Schedule" textFill="#000000b2">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="byTypeBtn" mnemonicParsing="false" onAction="#byTypeBtnHandler" text="By Type" textFill="#000000b2">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="byCustomerBtn" mnemonicParsing="false" onAction="#byCustomerBtnHandler" text="By Customer" textFill="#000000b2">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <TextArea fx:id="reportTxtArea" layoutY="150.0" prefHeight="719.0" prefWidth="870.0" />
+   </children>
+</AnchorPane>

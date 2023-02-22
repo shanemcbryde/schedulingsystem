@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="870.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="schedulingsystem.view_controller.AppointmentsController">
+   <children>
+      <AnchorPane prefHeight="120.0" prefWidth="870.0">
+         <children>
+            <Button fx:id="monthlyBtn" layoutX="605.0" layoutY="63.0" mnemonicParsing="false" onAction="#monthlyBtnHandler" text="Monthly View" textFill="#000000b2">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="weeklyBtn" layoutX="739.0" layoutY="63.0" mnemonicParsing="false" onAction="#weeklyBtnHandler" text="Weekly View" textFill="#000000b2">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="customersBtn" layoutX="30.0" layoutY="30.0" mnemonicParsing="false" onAction="#customersBtnHandler" text="Customers" textFill="#000000b2">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="exitBtn" layoutX="803.0" layoutY="20.0" mnemonicParsing="false" onAction="#exitBtnHandler" text="Exit" textFill="#000000b2">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="reportsBtn" layoutX="714.0" layoutY="20.0" mnemonicParsing="false" onAction="#reportsBtnHandler" text="Reports" textFill="#000000b2">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="120.0" prefHeight="30.0" prefWidth="870.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="870.0" text="Appointments" textFill="#000000b2" underline="true">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="150.0" prefHeight="285.0" prefWidth="870.0">
+         <children>
+            <GridPane layoutX="50.0" layoutY="50.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Customer:" textFill="#000000b2">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="App Type:" textFill="#000000b2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Date:" textFill="#000000b2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Time:" textFill="#000000b2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Duration:" textFill="#000000b2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="typeTxt" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <DatePicker fx:id="datePkr" prefWidth="200.0" promptText="Set Date" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Spinner fx:id="timeSpn" prefHeight="25.0" prefWidth="70.0" />
+                        <Label alignment="CENTER" prefWidth="32.0" text=" : " textFill="#000000b2">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="timeChB" prefWidth="65.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="140.0" layoutY="100.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <Spinner fx:id="durationSpn" prefHeight="25.0" prefWidth="70.0" />
+                        <Label text=" hrs  " textFill="#000000b2">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="durationChB" prefWidth="65.0" />
+                        <Label text=" mins" textFill="#000000b2">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ChoiceBox fx:id="customerChB" prefWidth="200.0" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <Button fx:id="addBtn" layoutX="537.0" layoutY="113.0" mnemonicParsing="false" onAction="#addBtnHandler" text="Add Appointment" textFill="#000000b2">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Separator layoutY="435.0" prefWidth="870.0" />
+      <AnchorPane layoutY="435.0" prefHeight="435.0" prefWidth="435.0">
+         <children>
+            <GridPane layoutX="50.0" layoutY="100.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Customer:" textFill="#000000b2">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="App Type:" textFill="#000000b2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Date:" textFill="#000000b2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Time:" textFill="#000000b2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Duration:" textFill="#000000b2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dateModifyPkr" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Spinner fx:id="timeModifySpn" prefHeight="25.0" prefWidth="70.0" />
+                        <Label alignment="CENTER" prefWidth="32.0" text=" : " textFill="#000000b2">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="timeModifyChB" prefWidth="65.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="140.0" layoutY="100.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <Spinner fx:id="durationModifySpn" prefHeight="25.0" prefWidth="70.0" />
+                        <Label text=" hrs  " textFill="#000000b2">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="durationModifyChB" prefWidth="65.0" />
+                        <Label text=" mins" textFill="#000000b2">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="customerModifyLbl" prefWidth="200.0" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="typeModifyLbl" layoutX="140.0" layoutY="17.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Button fx:id="modifyBtn" layoutX="176.0" layoutY="319.0" mnemonicParsing="false" onAction="#modifyBtnHandler" text="Modify" textFill="#000000b2">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteBtn" layoutX="302.0" layoutY="319.0" mnemonicParsing="false" onAction="#deleteBtnHandler" text="Delete" textFill="#000000b2">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="435.0" layoutY="435.0" prefHeight="435.0" prefWidth="435.0">
+         <children>
+            <TableView fx:id="appointmentTbl" prefHeight="435.0" prefWidth="435.0">
+              <columns>
+                <TableColumn fx:id="customerCol" prefWidth="105.0" text="Customer" />
+                <TableColumn fx:id="typeCol" prefWidth="87.0" text="Type" />
+                  <TableColumn fx:id="dateCol" prefWidth="93.0" text="Date" />
+                  <TableColumn fx:id="startCol" prefWidth="74.0" text="Start" />
+                  <TableColumn fx:id="endCol" prefWidth="75.0" text="Length" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
