@@ -1,25 +1,4 @@
-# Software-II-Advanced-Java-Concepts-C195
-## Course Overview
-<p>Software II – Advanced Java Concepts refines object-oriented programming expertise and builds database and file server application development skills. 
-You will learn about and put into action lambda expressions, collections, input/output, advanced error handling, 
-and the newest features of Java 11 to develop software that meets business requirements. This course requires intermediate expertise in object-oriented programming 
-and the Java language.</p>
-
-### Competencies
-<ul>
-<li><b>Database and File Server Applications</b></li>
-The graduate produces database and file server applications using advanced Java programming language constructs to meet business requirements.
-<li><b>Lambda</b></li>
-The graduate incorporates lambda expressions in application development to meet business requirements more efficiently.
-<li><b>Collections (Streams and Filters)</b></li>
-The graduate incorporates streams and filters in application development to manipulate data more efficiently.
-<li><b>Localization API & Date/Time API</b></li>
-The graduate applies the localization API and date/time API in application development to support end-users in various geographical regions.
-<li><b>Advanced Exception Control</b></li>
-The graduate incorporates advanced exception control mechanisms in application development for improving user experience and application stability.
-</ul>
-
-## Objective Assessment/Project Overview
+## Project Overview
 ### Introduction
 <p>Throughout your career in software design and development, you will be asked to create applications with various features and criteria based on a variety of business requirements. For this assessment, you will create your own Java application with requirements that mirror those you will encounter in a real-world job assignment.
 
